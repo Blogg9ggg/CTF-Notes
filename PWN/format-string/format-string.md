@@ -20,6 +20,15 @@
    * 盲打, dump 整个程序, 获取有用信息
 
 3. 123
+   
+### 覆盖内存
+1. 覆盖栈内存
+2. 覆盖任意地址内存
+  pwntools 提供一个构造覆盖任意地址内存的 payload 的函数:
+  ```python
+  # 将 addr 上内存覆盖为 value, 偏移为 offset
+  payload = fmtstr_payload(offset, {addr: value})
+  ```
 
 ### 实战
 1. hijack GOT  

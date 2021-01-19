@@ -49,6 +49,12 @@
    1. 确定 libc 的版本(利用 gdb-peda 直接查看 __libc_start_main 的地址)  
    `gdb ./pwn3` -> `r` -> ctrl + z -> `print __libc_start_main`
    ![](./assets/run4.png)<center>图13</center>
-   (卡住了, `./find __libc_stat_main` 找不到对应的 libc 版本)
-   2. 123
+   (这里卡住了, `./find __libc_stat_main` 找不到对应的 libc 版本, 不知道哪里出了问题. 在此先采取一种妥协式的做法, 直接用 `print system` 查询.)
+   ![](./assets/print_system.png)<center>图14</center>
+
+   2. 得到 put 函数在 plt 表中的地址
+   `objdump -R pwn3`
+   ![](./assets/put@plt.png)<center>图14</center>
+
+   3. 123
 4. 123

@@ -16,4 +16,5 @@
    s -> shared
    p -> private (copy on write)
    ```
-6. 123
+
+6. gc
