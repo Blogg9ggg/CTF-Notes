@@ -5,11 +5,12 @@
 2. chunk(chunk 就是堆的最小操作单元, 在 C 语言底层 具体实现中就是一个结构体)
    1. chunk 结构体
    ![](./assets/p7.png)
+   chunk 中的 P 是 PRE_INUSE 位, 标志上一个 chunk 是否在使用中.
    ![](./assets/p8.png)
    ![](./assets/p9.png)
    2. 123
    
-3. 堆的释放
+3. 堆的释放  
    堆的释放一般用 free 函数实现, free 后 chunk 会被添加到 bins 中进行管理(具体的结构体是 malloc_state). malloc_state 定义如下:![](./assets/p3.png)  
 
 4. bins  
@@ -18,4 +19,6 @@
    unsorted bin:![](./assets/p5.png)  
    small bin:![](./assets/p6.png)  
 
-5. 123
+5. unlink
+   ![](./assets/p12.png)
+6. 123
